@@ -1,0 +1,144 @@
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  background-color: var(--light-gray);
+}
+
+.container {
+  border-radius: 0.3rem;
+  overflow: hidden;
+  width: 300px;
+  margin: 3rem auto;
+}
+
+.card {
+  padding: 1.5rem;
+}
+
+.card .card-header {
+  font-weight: 700;
+}
+
+.card.subscription .card-header,
+.card.why-us .card-header {
+  color: #fff;
+}
+
+.card.subscription .preview,
+.card.why-us .preview {
+  color: var(--light-gray);
+}
+
+.card .preview {
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.card.our-community {
+  background-color: #fff;
+  padding-bottom: 2rem;
+}
+
+.card.our-community .main-heading {
+  color: var(--cyan);
+  font-size: 1.22rem;
+  font-weight: 700;
+}
+
+.card.our-community .sub-header {
+  font-size: 0.9rem;
+  color: var(--bright-yellow);
+  margin: 1.2rem 0;
+}
+
+.card.our-community .preview {
+  color: var(--grayish-blue);
+}
+
+.card.subscription {
+  background-color: var(--cyan);
+}
+
+.card.subscription .price-container {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.card.subscription .price-container .price {
+  color: #fff;
+  font-weight: 700;font-size: 2rem;
+}
+
+.card.subscription .price-container .per-month {
+  color: hsl(180.58deg 57.78% 70%);
+  font-size: 0.9rem;
+}
+
+.card.subscription .sign-up-btn {
+  font-size: 1rem;
+  font-weight: 400;
+  width: 100%;
+  background-color: var(--bright-yellow);
+  color: #fff;
+  padding: 0.7rem;
+  border: none;
+  margin-top: 1.4rem;
+  border-radius: 0.3rem;
+}
+
+.card.why-us {
+  background-color: hsl(179.48deg 47.15% 51.76%);
+}
+
+.card.why-us .preview {
+  max-width: 172px;
+  margin-top: 1rem;
+}
+
+@media (min-width: 620px) {
+  .container {
+    width: 600px;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .container .cards {
+    display: flex;
+  }
+
+  .container .card {
+    padding: 2rem !important;
+  }
+
+  .container .card.our-community .preview {
+    font-size: 1rem;
+  }
+
+  .container .cards .card {
+    flex: 1;
+  }
+
+  .card.subscription .sign-up-btn {
+    padding: 0.9rem;
+    margin-top: 1.7rem;
+  }
+}
